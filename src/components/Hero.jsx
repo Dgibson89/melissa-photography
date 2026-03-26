@@ -6,7 +6,7 @@ function Hero() {
           <h2 className="logo">Melissa Rodas Photography</h2>
 
           <div className="nav-links">
-            <a href="#work">Work</a>
+            <a href="#work">Portfolio</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </div>
@@ -24,7 +24,7 @@ function Hero() {
 
           <div className="hero-buttons">
             <a href="#work" className="btn btn-primary">
-              View Work
+              View Portfolio
             </a>
 
             <a href="#contact" className="btn btn-secondary">

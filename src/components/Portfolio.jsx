@@ -49,7 +49,7 @@ function Portfolio() {
   return (
     <section id="work" className="portfolio">
       <div className="portfolio-container">
-        <p className="section-label">Work</p>
+        <p className="section-label">Portfolio</p>
         <h2 className="portfolio-heading">Selected Work</h2>
 
         <div className="portfolio-grid">
