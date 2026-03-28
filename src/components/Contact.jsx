@@ -1,7 +1,9 @@
+import Reveal from './Reveal'
+
 function Contact() {
   return (
     <section id="contact" className="contact">
-      <div className="contact-container">
+      <Reveal className="contact-container">
         <div className="contact-intro">
           <p className="section-label">Contact</p>
           <h2 className="contact-heading">Let’s create something meaningful.</h2>
@@ -38,7 +40,7 @@ function Contact() {
             Send Inquiry
           </button>
         </form>
-      </div>
+      </Reveal>
     </section>
   )
 }

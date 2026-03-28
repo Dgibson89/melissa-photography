@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from './Reveal'
 
 const portfolioItems = [
   {
@@ -63,7 +64,7 @@ function Portfolio() {
 
   return (
     <section id="work" className="portfolio">
-      <div className="portfolio-container">
+      <Reveal className="portfolio-container">
         <p className="section-label">Portfolio</p>
         <h2 className="portfolio-heading">Selected Work</h2>
 
@@ -95,7 +96,7 @@ function Portfolio() {
             </article>
           ))}
         </div>
-      </div>
+      </Reveal>
 
       {selectedItem && (
         <div className="lightbox" onClick={() => setSelectedItem(null)}>

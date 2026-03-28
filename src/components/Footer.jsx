@@ -1,7 +1,9 @@
+import Reveal from './Reveal'
+
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <Reveal className="footer-container">
         <div className="footer-brand">
           <h3>Melissa Rodas Photography</h3>
           <p>California-based photography focused on light, form, and expression.</p>
@@ -17,7 +19,7 @@ function Footer() {
           <a href="/">Instagram</a>
           <a href="mailto:hello@example.com">Email</a>
         </div>
-      </div>
+      </Reveal>
 
       <div className="footer-bottom">
         <p>© 2026 Melissa Rodas Photography. All rights reserved.</p>
