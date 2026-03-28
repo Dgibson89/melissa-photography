@@ -228,6 +228,35 @@ img {
   grid-auto-rows: 250px;
 }
 
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  border: 1px solid #cdb9a7;
+  background-color: transparent;
+  color: #3a332c;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  background-color: #e9ddd2;
+}
+
+.filter-btn.active {
+  background-color: #1f1a17;
+  color: #fffaf5;
+  border-color: #1f1a17;
+}
+
 .grid-item {
   position: relative;
   border-radius: 6px;
@@ -564,6 +593,15 @@ img {
     grid-template-columns: 1fr;
     grid-auto-rows: 250px;
   }
+
+  .portfolio-filters {
+  gap: 0.6rem;
+}
+
+.filter-btn {
+  font-size: 0.85rem;
+  padding: 0.6rem 0.9rem;
+}
 
   .grid-item.large,
   .grid-item.wide {

@@ -43,8 +43,23 @@ const portfolioItems = [
   },
 ]
 
+const filters = [
+  'All',
+  'Portraits',
+  'Still Life',
+  'City',
+  'Conceptual',
+  'Abstract',
+]
+
 function Portfolio() {
   const [selectedItem, setSelectedItem] = useState(null)
+  const [activeFilter, setActiveFilter] = useState('All')
+
+  const filteredItems =
+    activeFilter === 'All'
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeFilter)
 
   return (
     <section id="work" className="portfolio">
@@ -52,8 +67,20 @@ function Portfolio() {
         <p className="section-label">Portfolio</p>
         <h2 className="portfolio-heading">Selected Work</h2>
 
+        <div className="portfolio-filters">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
         <div className="portfolio-grid">
-          {portfolioItems.map((item) => (
+          {filteredItems.map((item) => (
             <article
               key={item.id}
               className={`grid-item ${item.size}`}
@@ -71,10 +98,7 @@ function Portfolio() {
       </div>
 
       {selectedItem && (
-        <div
-          className="lightbox"
-          onClick={() => setSelectedItem(null)}
-        >
+        <div className="lightbox" onClick={() => setSelectedItem(null)}>
           <div
             className="lightbox-content"
             onClick={(event) => event.stopPropagation()}
