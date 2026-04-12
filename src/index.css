@@ -419,6 +419,23 @@ img {
 }
 
 /* =========================
+   STAGGERED PORTFOLIO REVEAL
+========================= */
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: staggerFadeUp 0.7s ease forwards;
+}
+
+@keyframes staggerFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
    LIGHTBOX MODAL
 ========================= */
 

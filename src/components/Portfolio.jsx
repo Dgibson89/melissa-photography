@@ -80,22 +80,23 @@ function Portfolio() {
           ))}
         </div>
 
-        <div className="portfolio-grid">
-          {filteredItems.map((item) => (
-            <article
-              key={item.id}
-              className={`grid-item ${item.size}`}
-              onClick={() => setSelectedItem(item)}
-            >
-              <img src={item.image} alt={item.title} />
+<div className="portfolio-grid">
+  {filteredItems.map((item, index) => (
+    <article
+      key={item.id}
+      className={`grid-item ${item.size} stagger-item`}
+      onClick={() => setSelectedItem(item)}
+      style={{ animationDelay: `${index * 0.12}s` }}
+    >
+      <img src={item.image} alt={item.title} />
 
-              <div className="grid-overlay">
-                <p className="grid-category">{item.category}</p>
-                <h3 className="grid-title">{item.title}</h3>
-              </div>
-            </article>
-          ))}
-        </div>
+      <div className="grid-overlay">
+        <p className="grid-category">{item.category}</p>
+        <h3 className="grid-title">{item.title}</h3>
+      </div>
+    </article>
+  ))}
+</div>
       </Reveal>
 
       {selectedItem && (
